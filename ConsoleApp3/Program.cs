@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 class Calculator
 {
     static void Main()
@@ -13,8 +13,16 @@ class Calculator
             Console.WriteLine("-");
             Console.WriteLine("*");
             Console.WriteLine("/");
+            Console.WriteLine("Для выхода нажмите 0");
+
             char operationChoice = Console.ReadKey().KeyChar;
             Console.WriteLine();
+
+            if (operationChoice == '0')
+            {
+                continueCalculations = false;
+                continue;
+            }
 
             if (operationChoice < '+' || operationChoice > '/')
             {
@@ -65,4 +73,3 @@ class Calculator
         Console.WriteLine("Еще увидимся");
     }
 }
-
